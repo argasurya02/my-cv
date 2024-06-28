@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaBars, FaTimes, FaFacebook, FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaBars, FaTimes, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
 const Navbar = () => {
@@ -28,9 +28,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div
-      className={`navbar w-full h-20 z-10 fixed duration-300 ease-in ${pageScroll ? "bg-gray-800 text-white" : "bg-white text-black"}`}
-    >
+    <div className={`navbar w-full h-20 z-10 fixed duration-300 ease-in ${pageScroll ? "bg-gray-800 text-white" : "bg-white text-black"}`}>
       <div className="flex justify-between items-center w-full h-full max-w-screen-xl mx-auto p-4">
         <Link href="/#home">
           <h1
@@ -58,7 +56,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className={`md:hidden fixed left-0 top-0 w-full h-full bg-black/70 backdrop-blur ${navigation ? "block" : "hidden"}`}>
+      <div className={`md:hidden fixed left-0 top-0 w-full h-full bg-black/70 backdrop-blur transition-opacity duration-300 ${navigation ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
         <div className="fixed left-0 top-0 w-4/5 h-full bg-white text-black p-10">
           <div className="flex w-full items-center justify-between">
             <Link href="/#home">

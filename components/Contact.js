@@ -37,26 +37,26 @@ const Contact = () => {
           </div>
 
           {/* form stuff */}
-          <div className="contact-form w-full md:w-1/2 h-full rounded-xl p-4 shadow-black rounded-xl">
+          <div className="contact-form w-full md:w-1/2 h-full rounded-xl p-4 shadow-black">
             <div className="p-4 text-left">
               <form action="https://getform.io/f/zbxdmeob" method="POST">
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-full">
                     <label className="capitalize text-sm py-2 text-white font-light">name</label>
-                    <input type="text" name="name" className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-700 bg-gray-600 text-white" />
+                    <input type="text" name="name" className="border-2 rounded-lg p-3 flex w-full focus:outline-none border-gray-700 bg-gray-600 text-white" />
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col w-full">
                     <label className="capitalize text-sm py-2 text-white font-light">phone</label>
-                    <input type="text" name="phone" className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-700 bg-gray-600 text-white" />
+                    <input type="text" name="phone" className="border-2 rounded-lg p-3 flex w-full focus:outline-none border-gray-700 bg-gray-600 text-white" />
                   </div>
 
-                  <div className="flex flex-col col-span-2">
+                  <div className="flex flex-col w-full col-span-2">
                     <label className="capitalize text-sm py-2 text-white font-light">email</label>
-                    <input type="email" name="email" className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-700 bg-gray-600 text-white" />
+                    <input type="email" name="email" className="border-2 rounded-lg p-3 flex w-full focus:outline-none border-gray-700 bg-gray-600 text-white" />
                   </div>
-                  <div className="flex flex-col col-span-2">
+                  <div className="flex flex-col w-full col-span-2">
                     <label className="capitalize text-sm py-2 text-white font-light">message</label>
-                    <textarea name="message" rows="10" className="border-2 rounded-lg p-3 flex focus:outline-none border-gray-700 bg-gray-600 text-white"></textarea>
+                    <textarea name="message" rows="10" className="border-2 rounded-lg p-3 flex w-full focus:outline-none border-gray-700 bg-gray-600 text-white"></textarea>
                   </div>
                 </div>
 
@@ -73,6 +73,5 @@ const Contact = () => {
     </div>
   );
 };
-
 
 export default Contact;
