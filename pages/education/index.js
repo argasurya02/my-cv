@@ -6,7 +6,7 @@ import installNode from "../../public/assets/portfolio/smpk-2.jpg";
 import reactParallax from "../../public/assets/portfolio/litle.jpg";
 import usestate from "../../public/assets/portfolio/tj.jpg";
 import reactWeather from "../../public/assets/portfolio/smk-wira.jpg";
-import { Education } from '@/components/Portofolio';
+import { Education } from '@/components/Education';
 
 export const getStaticProps = async () => {
   const educations = [
