@@ -1,13 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import {
-  FaBars,
-  FaTimes,
-  FaFacebook,
-  FaGithub,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaBars, FaTimes, FaFacebook, FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
 const Navbar = () => {
@@ -59,48 +52,29 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {!navigation && (
-            <div
-              className="md:hidden cursor-pointer"
-              onClick={() => setNavigation(true)}
-            >
-              <FaBars size={30} />
-            </div>
-          )}
+          <div className="md:hidden cursor-pointer" onClick={() => setNavigation(!navigation)}>
+            {navigation ? <FaTimes size={30} /> : <FaBars size={30} />}
+          </div>
         </div>
       </div>
 
-      <div
-        className={
-          navigation
-            ? "md:hidden fixed left-0 top-0 w-full h-full bg-black/70 backdrop-blur"
-            : ""
-        }
-      >
-        <div
-          className={
-            navigation
-              ? "fixed left-0 top-0 w-4/5 h-full bg-white text-black p-10 ease-in duration-500"
-              : "fixed top-0 left-[-100%] p-10 h-full ease-in duration-500"
-          }
-        >
-          <div>
-            <div className="flex w-full items-center justify-between">
-              <Link href="/#home">
-                <h2
-                  onClick={() => setNavigation(false)}
-                  className="text-3xl font-bold uppercase underline underline-offset-2 tracking-wider cursor-pointer"
-                  style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.4)" }}
-                >
-                  ARGA SURYA DHARMA
-                </h2>
-              </Link>
-              <div
+      <div className={`md:hidden fixed left-0 top-0 w-full h-full bg-black/70 backdrop-blur ${navigation ? "block" : "hidden"}`}>
+        <div className="fixed left-0 top-0 w-4/5 h-full bg-white text-black p-10">
+          <div className="flex w-full items-center justify-between">
+            <Link href="/#home">
+              <h2
                 onClick={() => setNavigation(false)}
-                className="p-3 cursor-pointer"
+                className="text-3xl font-bold uppercase underline underline-offset-2 tracking-wider cursor-pointer"
+                style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.4)" }}
               >
-                <FaTimes size={30} />
-              </div>
+                ARGA SURYA DHARMA
+              </h2>
+            </Link>
+            <div
+              onClick={() => setNavigation(false)}
+              className="p-3 cursor-pointer"
+            >
+              <FaTimes size={30} />
             </div>
           </div>
 
@@ -122,30 +96,50 @@ const Navbar = () => {
               <div className="grid grid-cols-2 mx-auto w-4/5 gap-10">
                 <div className="flex items-center justify-center relative">
                   <div className="rounded-full overflow-hidden border-2 border-gray-300 p-3 cursor-pointer shadow-md">
-                  <a href="https://www.linkedin.com/in/argasuryadharma/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center rounded-full shadow-md bg-gray-600 hover:bg-gray-700 duration-200 p-3 cursor-pointer hover:scale-105">
-                <FaLinkedin size={25} className="text-white" />
-              </a>
+                    <a
+                      href="https://www.linkedin.com/in/argasuryadharma/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center rounded-full shadow-md bg-gray-600 hover:bg-gray-700 duration-200 p-3 cursor-pointer hover:scale-105"
+                    >
+                      <FaLinkedin size={25} className="text-white" />
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center justify-center relative">
                   <div className="rounded-full overflow-hidden border-2 border-gray-300 p-3 cursor-pointer shadow-md">
-                  <a href="https://www.instagram.com/invites/contact/?igsh=c6cnrxayxu1i&utm_content=49qrlz2" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center rounded-full shadow-md bg-gray-600 hover:bg-gray-700 duration-200 p-3 cursor-pointer hover:scale-105">
-                <AiFillInstagram size={25} className="text-white" />
-              </a>
+                    <a
+                      href="https://www.instagram.com/invites/contact/?igsh=c6cnrxayxu1i&utm_content=49qrlz2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center rounded-full shadow-md bg-gray-600 hover:bg-gray-700 duration-200 p-3 cursor-pointer hover:scale-105"
+                    >
+                      <AiFillInstagram size={25} className="text-white" />
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center justify-center relative">
                   <div className="rounded-full overflow-hidden border-2 border-gray-300 p-3 cursor-pointer shadow-md">
-                  <a href="https://www.facebook.com/arga.s.dharma?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center rounded-full shadow-md bg-gray-600 hover:bg-gray-700 duration-200 p-3 cursor-pointer hover:scale-105">
-                <FaFacebook size={25} className="text-white" />
-              </a>
+                    <a
+                      href="https://www.facebook.com/arga.s.dharma?mibextid=ZbWKwL"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center rounded-full shadow-md bg-gray-600 hover:bg-gray-700 duration-200 p-3 cursor-pointer hover:scale-105"
+                    >
+                      <FaFacebook size={25} className="text-white" />
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center justify-center relative">
                   <div className="rounded-full overflow-hidden border-2 border-gray-300 p-3 cursor-pointer shadow-md">
-                  <a href="https://github.com/argasurya02" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center rounded-full shadow-md bg-gray-600 hover:bg-gray-700 duration-200 p-3 cursor-pointer hover:scale-105">
-                <FaGithub size={25} className="text-white" />
-              </a>
+                    <a
+                      href="https://github.com/argasurya02"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center rounded-full shadow-md bg-gray-600 hover:bg-gray-700 duration-200 p-3 cursor-pointer hover:scale-105"
+                    >
+                      <FaGithub size={25} className="text-white" />
+                    </a>
                   </div>
                 </div>
               </div>
