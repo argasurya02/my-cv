@@ -6,7 +6,7 @@ import { AiFillInstagram } from "react-icons/ai";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full bg-gradient-to-b from-gray-800 to-gray-900">
+    <div id="contact" className="contact-container w-full bg-gradient-to-b from-gray-800 to-gray-900">
       <div className="max-w-screen-xl mx-auto px-8 py-16 text-center md:text-left">
         <h2 className="text-5xl md:text-7xl tracking-wider uppercase font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
           contact
@@ -37,7 +37,7 @@ const Contact = () => {
           </div>
 
           {/* form stuff */}
-          <div className="w-full md:w-1/2 h-full rounded-xl p-4 shadow-black rounded-xl">
+          <div className="contact-form w-full md:w-1/2 h-full rounded-xl p-4 shadow-black rounded-xl">
             <div className="p-4 text-left">
               <form action="https://getform.io/f/zbxdmeob" method="POST">
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
@@ -73,5 +73,6 @@ const Contact = () => {
     </div>
   );
 };
+
 
 export default Contact;

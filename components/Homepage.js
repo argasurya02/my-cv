@@ -3,33 +3,33 @@ import heroImage from '../public/assets/profile-pic.png';
 import { MdExpandMore } from 'react-icons/md';
 import Image from 'next/image';
 import Link from 'next/link';
-import Typewriter from "typewriter-effect";
+import Typewriter from 'typewriter-effect';
 
 const Homepage = () => {
   return (
-    <div id='home' className='h-screen w-full text-center '>
+    <div id='home' className='h-screen w-full text-center'>
       <div className='max-w-screen-xl mx-auto w-full h-full pt-24 p-4 flex flex-col items-center'>
         <div className='mx-auto overflow-hidden rounded-xl w-80 h-80'>
           {/* Menyesuaikan ukuran gambar */}
-          <Image src={heroImage} alt='me' width={300} height={300}/>
+          <Image src={heroImage} alt='me' width={300} height={300} />
         </div>
         
         {/* Menambahkan efek hover dan bayangan pada judul */}
-        <h1 className='uppercase font-bold text-gray-700 text-7xl transition-transform hover:scale-105' style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.4)' }}>
-        <Typewriter
-                options={{
-                  strings: [
-                    "BEGINNER DEVELOPER",
-                    "ALSO A STUDENT!",
-                    "",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
+        <h1 className='uppercase font-bold text-gray-700 text-5xl sm:text-7xl transition-transform hover:scale-105' style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.4)' }}>
+          <Typewriter
+            options={{
+              strings: [
+                "BEGINNER DEVELOPER",
+                "ALSO A STUDENT!",
+                "",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </h1>
         
-        <p className='text-gray-600 text-xl max-w-lg mx-auto mt-4' style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.4)' }}>
+        <p className='text-gray-600 text-lg max-w-lg mx-auto mt-4' style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.4)' }}>
           I am a student at SMK Wira Harapan, specializing in <span className='font-bold'>Software Engineering.</span> I am known for my cheerful demeanor, proactive communication skills, and strong academic performance. I excel in both team collaboration and independent work.
         </p>
         

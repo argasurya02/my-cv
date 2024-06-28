@@ -9,4 +9,14 @@
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
   }
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
 }  
