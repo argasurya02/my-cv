@@ -11,7 +11,7 @@ const Homepage = () => {
       <div className='max-w-screen-xl mx-auto w-full h-full pt-24 p-4 flex flex-col items-center'>
         <div className='mx-auto overflow-hidden rounded-xl w-80 h-80'>
           {/* Menyesuaikan ukuran gambar */}
-          <Image src={heroImage} alt='me'/>
+          <Image src={heroImage} alt='me' width={300} height={300}/>
         </div>
         
         {/* Menambahkan efek hover dan bayangan pada judul */}
