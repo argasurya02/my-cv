@@ -7,7 +7,7 @@ import Typewriter from 'typewriter-effect';
 
 const Homepage = () => {
   return (
-    <div id='home' className='h-screen w-full text-center'>
+    <div id='home' className='h-full w-full text-center'>
       <div className='max-w-screen-xl mx-auto w-full h-full pt-24 p-4 flex flex-col items-center'>
         <div className='mx-auto overflow-hidden rounded-xl w-80 h-80'>
           {/* Menyesuaikan ukuran gambar */}
